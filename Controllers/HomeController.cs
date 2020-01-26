@@ -15,14 +15,14 @@ namespace Kg506115MIS4200_sp20.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Meet Kirsten Gill";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Student Contact Information";
 
             return View();
         }

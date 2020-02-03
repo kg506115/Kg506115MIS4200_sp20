@@ -14,7 +14,7 @@ namespace Kg506115MIS4200_sp20.Models
         public int numberOfCreditHours { get; set; }
 
         // one relationship
-        public ICollection<CourseDetails> courseDetails { get; set; }
+        public ICollection<CourseDetails> CourseDetails { get; set; }
 
     }
 }

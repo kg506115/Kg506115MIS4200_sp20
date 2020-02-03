@@ -14,5 +14,7 @@ namespace Kg506115MIS4200_sp20.Models
         public string studentPhone { get; set; }
         public DateTime studentSince { get; set; }
 
+        // can have several classes
+        public ICollection<Course> Course { get; set; }
     }
 }

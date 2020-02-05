@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using kg506115-MIS4200.Models;
-using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using kg506115_MIS4200.Models;  // This is needed to access the models 
+using System.Data.Entity;  // this is needed to access the DbContext object
+
 
 
 namespace Kg506115MIS4200_sp20.DAL
@@ -21,6 +22,6 @@ namespace Kg506115MIS4200_sp20.DAL
         public DbSet<Student> Students { get; set; }
         public DbSet<Instructor> Instructors { get; set; }
         public DbSet<Course> Courses { get; set; }
-        public DbSet<CourseDetail> CourseDetails { get; set; }
+        public DbSet<CourseDetails> CourseDetails { get; set; }
     }
 }

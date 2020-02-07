@@ -14,9 +14,9 @@ namespace Kg506115MIS4200_sp20.Models
 
         // link the courseDetails to the Courses
         public int courseID { get; set; }
-        public virtual Course { get; set; } 
-
-
-
+        public virtual Course Course { get; set; }
+        // link the courseDetails to the Students
+        public int studentID { get; set; }
+        public virtual Student Student { get; set; }
     }
 }

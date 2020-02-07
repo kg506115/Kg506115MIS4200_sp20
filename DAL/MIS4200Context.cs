@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using kg506115_MIS4200.Models;  // This is needed to access the models 
+using Kg506115MIS4200_sp20.Models;  // This is needed to access the models 
 using System.Data.Entity;  // this is needed to access the DbContext object
-
-
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace Kg506115MIS4200_sp20.DAL
 {
@@ -23,5 +22,11 @@ namespace Kg506115MIS4200_sp20.DAL
         public DbSet<Instructor> Instructors { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<CourseDetails> CourseDetails { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

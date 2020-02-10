@@ -18,7 +18,7 @@ namespace Kg506115MIS4200_sp20.Controllers
         // GET: Courses
         public ActionResult Index()
         {
-            var courses = db.Courses.Include(c => c.Instructor).Include(c => c.Student);
+            var courses = db.Courses.Include(c => c.Instructor);
             return View(courses.ToList());
         }
 
@@ -41,7 +41,6 @@ namespace Kg506115MIS4200_sp20.Controllers
         public ActionResult Create()
         {
             ViewBag.instructorID = new SelectList(db.Instructors, "instructorID", "instructorFirstName");
-            ViewBag.studentID = new SelectList(db.Students, "studentID", "studentFirstName");
             return View();
         }
 
@@ -50,7 +49,7 @@ namespace Kg506115MIS4200_sp20.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "courseID,courseAbbreviation,courseTitle,courseDescription,numberOfCreditHours,instructorID,studentID")] Course course)
+        public ActionResult Create([Bind(Include = "courseID,courseAbbreviation,courseTitle,courseDescription,numberOfCreditHours,instructorID")] Course course)
         {
             if (ModelState.IsValid)
             {
@@ -60,7 +59,6 @@ namespace Kg506115MIS4200_sp20.Controllers
             }
 
             ViewBag.instructorID = new SelectList(db.Instructors, "instructorID", "instructorFirstName", course.instructorID);
-            ViewBag.studentID = new SelectList(db.Students, "studentID", "studentFirstName", course.studentID);
             return View(course);
         }
 
@@ -77,7 +75,6 @@ namespace Kg506115MIS4200_sp20.Controllers
                 return HttpNotFound();
             }
             ViewBag.instructorID = new SelectList(db.Instructors, "instructorID", "instructorFirstName", course.instructorID);
-            ViewBag.studentID = new SelectList(db.Students, "studentID", "studentFirstName", course.studentID);
             return View(course);
         }
 
@@ -86,7 +83,7 @@ namespace Kg506115MIS4200_sp20.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "courseID,courseAbbreviation,courseTitle,courseDescription,numberOfCreditHours,instructorID,studentID")] Course course)
+        public ActionResult Edit([Bind(Include = "courseID,courseAbbreviation,courseTitle,courseDescription,numberOfCreditHours,instructorID")] Course course)
         {
             if (ModelState.IsValid)
             {
@@ -95,7 +92,6 @@ namespace Kg506115MIS4200_sp20.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.instructorID = new SelectList(db.Instructors, "instructorID", "instructorFirstName", course.instructorID);
-            ViewBag.studentID = new SelectList(db.Students, "studentID", "studentFirstName", course.studentID);
             return View(course);
         }
 

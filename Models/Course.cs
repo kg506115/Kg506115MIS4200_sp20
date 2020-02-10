@@ -21,11 +21,6 @@ namespace Kg506115MIS4200_sp20.Models
         // instructor can teach many classes
         public int instructorID { get; set; }
         public virtual Instructor Instructor { get; set; }
-        
-        // students must tie to a course
-        public int studentID { get; set; }
-        public virtual Student Student { get; set; }
-
 
     }
 }

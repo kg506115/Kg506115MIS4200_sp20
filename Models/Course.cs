@@ -10,9 +10,13 @@ namespace Kg506115MIS4200_sp20.Models
     {
         [Key]
         public int courseID { get; set; }
+        [Display (Name ="Course")]
         public string courseAbbreviation { get; set; }
+        [Display(Name = "Title")]
         public string courseTitle { get; set; }
+        [Display(Name = "Course Description")]
         public string courseDescription { get; set; }
+        [Display(Name = "Credit Hours")]
         public int numberOfCreditHours { get; set; }
 
         // one relationship

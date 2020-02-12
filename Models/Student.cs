@@ -13,6 +13,7 @@ namespace Kg506115MIS4200_sp20.Models
         public string studentEmail { get; set; }
         public string studentPhone { get; set; }
         public DateTime studentSince { get; set; }
+        public string studentFullName { get { return studentLastName + ", " + studentFirstName; } }
 
         // can have several classes
         public ICollection<Course> Course { get; set; }

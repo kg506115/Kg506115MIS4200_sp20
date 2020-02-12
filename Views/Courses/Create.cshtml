@@ -52,6 +52,7 @@
             <div class="col-md-10">
                 @Html.DropDownList("instructorID", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.instructorID, "", new { @class = "text-danger" })
+                ViewBag.ID = new SelectList(db.UserDetails, "ID", "instructorFullName");
             </div>
         </div>
 

@@ -17,7 +17,7 @@ namespace Kg506115MIS4200_sp20.Models
         [Display(Name = "Title")]
         public string courseTitle { get; set; }
 
-        [Display(Name = "Course Description")]
+        [Display(Name = "Description")]
         public string courseDescription { get; set; }
 
         [Display(Name = "Credit Hours")]

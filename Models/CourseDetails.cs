@@ -10,7 +10,10 @@ namespace Kg506115MIS4200_sp20.Models
     {
         [Key]
         public int courseDetailsID { get; set; }
+
+        [Display(Name = "Semester")]
         public string semesterDate { get; set; }
+
 
         // link the courseDetails to the Courses
         public int courseID { get; set; }

@@ -12,6 +12,8 @@ namespace Kg506115MIS4200_sp20.Models
         public int courseDetailsID { get; set; }
 
         [Display(Name = "Semester")]
+        [Required(ErrorMessage = "Please provide the semester of when the course is taken. (Ex. Fall 2018)")]
+        [StringLength(50)]
         public string semesterDate { get; set; }
 
 

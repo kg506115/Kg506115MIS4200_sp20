@@ -12,15 +12,23 @@ namespace Kg506115MIS4200_sp20.Models
         public int courseID { get; set; }
 
         [Display (Name ="Course")]
+        [Required(ErrorMessage = "Please provide the course abbreviation. (Ex. MATH 1350")]
+        [StringLength(10)]
         public string courseAbbreviation { get; set; }
 
         [Display(Name = "Title")]
+        [Required(ErrorMessage = "Please provide the course title. (Ex. Business Calculus")]
+        [StringLength(50)]
         public string courseTitle { get; set; }
 
         [Display(Name = "Description")]
+        [Required(ErrorMessage = "Please provide a relevant course description.")]
+        [StringLength(500)]
         public string courseDescription { get; set; }
 
         [Display(Name = "Credit Hours")]
+        [Required(ErrorMessage = "Please provide the number of credit hours. (Ex. 3)")]
+        [StringLength(2)]
         public int numberOfCreditHours { get; set; }
 
         // one relationship

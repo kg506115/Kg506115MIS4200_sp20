@@ -27,8 +27,7 @@ namespace Kg506115MIS4200_sp20.Models
         public string courseDescription { get; set; }
 
         [Display(Name = "Credit Hours")]
-        [Required(ErrorMessage = "Please provide the number of credit hours. (Ex. 3)")]
-        [StringLength(2)]
+        [Required]
         public int numberOfCreditHours { get; set; }
 
         // one relationship

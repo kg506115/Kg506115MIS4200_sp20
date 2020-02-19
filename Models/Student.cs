@@ -11,25 +11,26 @@ namespace Kg506115MIS4200_sp20.Models
         public int studentID { get; set; }
         
         [Display(Name = "First Name")]
-        [Required(ErrorMessage = "Must enter first name.")]
+        [Required(ErrorMessage = "Please enter a first name.")]
         [StringLength(20)]
         public string studentFirstName { get; set; }
 
         [Display(Name = "Last Name")]
-        [Required(ErrorMessage = "Must enter last name.")]
+        [Required(ErrorMessage = "Please enter a last name.")]
         [StringLength(20)]
         public string studentLastName { get; set; }
 
         [Display(Name = "Email")]
-        [Required]
+        [Required(ErrorMessage = "Please enter a valid email.")]
         [StringLength(20)]
         public string studentEmail { get; set; }
 
         [Display(Name = "Phone")]
-        [Required]
+        [Required(ErrorMessage = "Please enter a primary phone number.")]
         public string studentPhone { get; set; }
 
         [Display(Name = "Student Since")]
+        [Required]
         public DateTime studentSince { get; set; }
 
         [Display(Name = "Student")]

@@ -30,13 +30,13 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#Instructors">Instructors</a></li>
-                            <li><a href="#Students">Students</a></li>
-                            <li><a href="#Courses">Courses</a></li>
-                            <li><a href="#CourseDetails">Course Enrollment</a></li>
+                            <li><a onclick="location.href='@Url.Action("Index","Students")'">Student List</a></li>
+                            <li><a onclick="location.href='@Url.Action("Index","Instructors")'">Instructor List</a></li>
+                            <li><a onclick="location.href='@Url.Action("Index","Courses")'">Course List</a></li>
+                            <li><a onclick="location.href='@Url.Action("Index","CourseDetails")'">Course Enrollment</a></li>
                         </ul>
                     </li>
-                 
+
 
                 </ul>
 

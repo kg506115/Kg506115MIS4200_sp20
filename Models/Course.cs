@@ -12,12 +12,12 @@ namespace Kg506115MIS4200_sp20.Models
         public int courseID { get; set; }
 
         [Display (Name ="Course")]
-        [Required(ErrorMessage = "Please provide the course abbreviation. (Ex. MATH 1350")]
+        [Required(ErrorMessage = "Please provide the course abbreviation. (Ex. MATH 1350)")]
         [StringLength(10)]
         public string courseAbbreviation { get; set; }
 
         [Display(Name = "Title")]
-        [Required(ErrorMessage = "Please provide the course title. (Ex. Business Calculus")]
+        [Required(ErrorMessage = "Please provide the course title. (Ex. Business Calculus)")]
         [StringLength(50)]
         public string courseTitle { get; set; }
 
